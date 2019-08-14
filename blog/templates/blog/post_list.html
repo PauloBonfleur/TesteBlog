@@ -10,17 +10,14 @@
 <body>
     <div>
         <h1><a href="">Tecnology Blog</a></h1>
-        <p>Publicado recentemente.</p>
     </div>
-
+    {% for post in posts %}
     <div>
-        <h2><a href="">Meu Primeiro Post</a></h2>
-        <p>Teoria geral e/ou estudo sistemático sobre técnicas, processos, métodos, meios e instrumentos de um ou mais ofícios ou domínios da atividade humana (p.ex., indústria, ciência etc.).</p>
+        <p>Publicado: {{post.publish_date}}</p>
+        <h2><a href="">{{post.title}}</a></h2>
+        <p>{{post.text|linebreaksbr}}</p>
     </div>
+    {% endfor %}
 
-    <div>
-        <h2><a href="">Meu segundo Post</a></h2>
-        <p>Existe um equilíbrio grande entre as vantagens e as desvantagens que o avanço da tecnologia traz para a sociedade. A principal vantagem é refletida na produção industrial: a tecnologia torna a produção mais rápida e maior e, sendo assim, o resultado final é um produto mais barato e com maior qualidade.</p>
-    </div>
 </body>
 </html>
