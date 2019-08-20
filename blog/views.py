@@ -45,6 +45,4 @@ def post_edit(request, pk):
     return render(request, 'blog/post_edit.html', {'form': form})
 
 
-def ola(request):
-    ola = 'Oi , Testando'
-    return render(request, 'blog/ola.html', {'ola': ola})
+
